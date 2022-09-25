@@ -1,0 +1,64 @@
+/*  
+    Windows XP color palette!
+*/
+
+:root {
+  --xp-blurple: #3833ac;
+  --xp-blue: #00309c;
+  --xp-dark-blue: #0336b3;
+  --xp-light-blue: #5a7edc;
+  --xp-lighter-blue: #91b1ee;
+  --xp-lightest-blue: #c5dafc;
+  --xp-orange: #f69438;
+  --xp-white: #ffffff;
+  --xp-green: #369836;
+  --xp-light-green: #96c496;
+  --xp-dark-green: #1f611f;
+
+  --xp-blurple-gradient: linear-gradient(45deg, var(--xp-blurple), var(--xp-blue));
+
+  --sloth_orange2: var(--xp-orange);
+  --link_fg: var(--xp-lightest-blue);
+}
+
+html, body {
+  font-size: large;
+}
+
+.page {
+  background: radial-gradient(circle closest-corner at 20% 20%, var(--xp-lighter-blue), var(--xp-light-blue));
+  color: var(--xp-white);
+  text-shadow: 1px 1px 1px black;
+}
+
+.button, button {
+  background: var(--xp-green);
+  border: 0.15rem solid var(--xp-light-green);
+  color: var(--xp-white);
+}
+
+.button:hover, button:hover {
+  background: var(--xp-light-green);
+  border: 0.15rem solid var(--xp-white);
+}
+
+.toot, .toot.expanded {
+  background: var(--xp-blurple-gradient);
+  border: 0.15rem solid var(--xp-lightest-blue);
+}
+
+.profile {
+  background: var(--xp-blurple-gradient);
+}
+
+.profile .basic .displayname, .profile .basic #profile-basic-filler2 {
+  border-bottom: 0.15rem dotted var(--xp-orange);
+}
+
+.accountstats {
+  border-top: 0.15rem solid var(--xp-lightest-blue);
+}
+
+.toot .info {
+  border-top: 0.15rem solid var(--xp-lightest-blue);
+}
