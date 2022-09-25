@@ -1,0 +1,92 @@
+// Gives your profile and statuses a nice pearlescent pink/white/blue effect.
+// To make this work with the intended font, your instance admin has to follow
+// the instructions here:
+//
+// https://gts.superseriousbusiness.org/@dumpsterqueer/statuses/01GD0JQPDNJJGKAJ0Z6Z4CKRHY 
+//
+// Otherwise, it will just work with the default GoToSocial font (which also
+// looks great honestly).
+
+:root {
+  --link_fg: var(--sloth_gray2_darker15);
+  --bg_trans: rgba(255, 255, 255, 0.5);
+  --bg_nearly_opaque: rgba(255, 255, 255, 0.8);
+  --trans_flag: linear-gradient(#5BCEFA, #F5A9B8, #FFFFFF, #F5A9B8, #5BCEFA);
+}
+
+@-webkit-keyframes BackgroundAnimation {
+  0%{background-position:76% 0%}
+  50%{background-position:25% 100%}
+  100%{background-position:76% 0%}
+}
+
+@-moz-keyframes BackgroundAnimation {
+  0%{background-position:76% 0%}
+  50%{background-position:25% 100%}
+  100%{background-position:76% 0%}
+}
+
+@keyframes BackgroundAnimation {
+  0%{background-position:76% 0%}
+  50%{background-position:25% 100%}
+  100%{background-position:76% 0%}
+}
+
+.page {
+  background: var(--trans_flag);
+  background-size: 600% 600%;
+  -webkit-animation: BackgroundAnimation 60s ease infinite;
+  -moz-animation: BackgroundAnimation 60s ease infinite;
+  animation: BackgroundAnimation 60s ease infinite;
+}
+
+header a div h1 {
+  color: var(--sloth_gray2_darker15);
+}
+
+@font-face {
+  font-family: "Atkinson Hyperlegible";
+  font-weight: 400;
+  src: url(/assets/Atkinson-Hyperlegible-Regular-102.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: "Atkinson Hyperlegible";
+  font-weight: bold;
+  src: url(/assets/Atkinson-Hyperlegible-Bold-102.ttf) format('truetype');
+}
+
+html, body {
+  font-family: "Atkinson Hyperlegible", "Noto Sans", sans-serif;
+  font-size: large;
+  color: var(--sloth_gray2_darker15);
+}
+
+.profile {
+  background: var(--bg_trans);
+}
+
+.profile .basic .username {
+  color: initial;
+}
+
+.toot {
+  background: var(--bg_trans);
+}
+
+.toot.expanded {
+  background: var(--bg_trans);
+}
+
+toot .text .content pre, .toot .text .content code {
+  background-color: var(--bg_nearly_opaque); 
+}
+
+.toot .text .content pre, .toot .text .content code {
+  background-color: var(--bg_nearly_opaque);
+}
+
+.emoji {
+  width: 3.5ex;
+  height: 3.5ex;
+}
