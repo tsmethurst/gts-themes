@@ -1,11 +1,13 @@
-// Gives your profile and statuses a nice pearlescent pink/white/blue effect.
-// To make this work with the intended font, your instance admin has to follow
-// the instructions here:
-//
-// https://gts.superseriousbusiness.org/@dumpsterqueer/statuses/01GD0JQPDNJJGKAJ0Z6Z4CKRHY 
-//
-// Otherwise, it will just work with the default GoToSocial font (which also
-// looks great honestly).
+/*  
+    Gives your profile and statuses a nice pearlescent pink/white/blue effect.
+    To make this work with the intended font, your instance admin has to follow
+    the instructions here:
+   
+    https://gts.superseriousbusiness.org/@dumpsterqueer/statuses/01GD0JQPDNJJGKAJ0Z6Z4CKRHY 
+   
+    Otherwise, it will just work with the default GoToSocial font (which also
+    looks great honestly).
+*/
 
 :root {
   --link_fg: var(--sloth_gray2_darker15);
