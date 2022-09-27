@@ -1,5 +1,12 @@
 /*  
     Windows XP color palette!
+    To make this work with the intended font, your instance admin has to follow
+    the instructions here:
+   
+    https://gts.superseriousbusiness.org/@dumpsterqueer/statuses/01GD0JQPDNJJGKAJ0Z6Z4CKRHY 
+   
+    Otherwise, it will just work with the default GoToSocial font (which also
+    looks great honestly).
 */
 
 :root {
@@ -21,8 +28,31 @@
   --link_fg: var(--xp-lightest-blue);
 }
 
+@font-face {
+  font-family: "Windows Regular";
+  font-weight: 400;
+  src: url(/assets/Windows-Regular.ttf) format('truetype');
+}
+
 html, body {
-  font-size: large;
+  font-family: "Windows Regular", "Noto Sans", sans-serif;
+  font-size: x-large; /* if you don't have the windows font installed, change this to just large */
+  scrollbar-color: var(--xp-lighter-blue) var(--xp-white);
+}
+
+/* CRT scanline effect */
+.page::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+  z-index: 5;
+  background-size: 100% 2px, 3px 100%;
+  pointer-events: none;
 }
 
 .page {
@@ -61,4 +91,8 @@ html, body {
 
 .toot .info {
   border-top: 0.15rem solid var(--xp-lightest-blue);
+}
+
+.toot .text .content pre, .toot .text .content code {
+  background-color: black;
 }
