@@ -36,7 +36,7 @@
 
 html, body {
   font-family: "Windows Regular", "Noto Sans", sans-serif;
-  font-size: x-large; /* if you don't have the windows font installed, change this to just large */
+  font-size: large;
   scrollbar-color: var(--xp-lighter-blue) var(--xp-white);
 }
 
@@ -95,5 +95,5 @@ html, body {
 
 .toot .text .content pre, .toot .text .content code {
   background-color: black;
-  font-size: medium; /* change this to large if you're not using the windows font */
+  font-size: medium;
 }
