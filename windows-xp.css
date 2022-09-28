@@ -22,7 +22,7 @@
   --xp-light-green: #96c496;
   --xp-dark-green: #1f611f;
 
-  --xp-blurple-gradient: linear-gradient(45deg, var(--xp-blurple), var(--xp-blue));
+  --xp-blurple-gradient: linear-gradient(45deg, var(--xp-blurple), var(--xp-blue), var(--xp-blurple));
 
   --sloth_orange2: var(--xp-orange);
   --link_fg: var(--xp-lightest-blue);
