@@ -7,13 +7,15 @@
    
     Otherwise, it will just work with the default GoToSocial font (which also
     looks great honestly).
+
+    GoToSocial v0.6.0 and up.
 */
 
 :root {
-  --link_fg: var(--sloth_gray2_darker15);
-  --bg_trans: rgba(255, 255, 255, 0.5);
-  --bg_nearly_opaque: rgba(255, 255, 255, 0.8);
-  --trans_flag: linear-gradient(#5BCEFA, #F5A9B8, #FFFFFF, #F5A9B8, #5BCEFA);
+  --link-fg: var(--gray1);
+  --bg-trans: rgba(255, 255, 255, 0.5);
+  --bg-nearly-opaque: rgba(255, 255, 255, 0.8);
+  --trans-flag: linear-gradient(#5BCEFA, #F5A9B8, #FFFFFF, #F5A9B8, #5BCEFA);
 }
 
 @-webkit-keyframes BackgroundAnimation {
@@ -35,7 +37,7 @@
 }
 
 .page {
-  background: var(--trans_flag);
+  background: var(--trans-flag);
   background-size: 600% 600%;
   -webkit-animation: BackgroundAnimation 60s ease infinite;
   -moz-animation: BackgroundAnimation 60s ease infinite;
@@ -43,7 +45,7 @@
 }
 
 header a div h1 {
-  color: var(--sloth_gray2_darker15);
+  color: var(--gray1);
 }
 
 @font-face {
@@ -61,11 +63,11 @@ header a div h1 {
 html, body {
   font-family: "Atkinson Hyperlegible", "Noto Sans", sans-serif;
   font-size: large;
-  color: var(--sloth_gray2_darker15);
+  color: var(--gray1);
 }
 
 .profile {
-  background: var(--bg_trans);
+  background: var(--bg-trans);
 }
 
 .profile .basic .username {
@@ -73,22 +75,26 @@ html, body {
 }
 
 .toot {
-  background: var(--bg_trans);
+  background: var(--bg-trans);
+}
+
+.toot .info {
+  background: var(--bg-trans);
+  color: initial;
 }
 
 .toot.expanded {
-  background: var(--bg_trans);
+  background: var(--bg-trans);
 }
 
+.toot .not-expanded {
+  color: var(--gray1);
+};
+
 toot .text .content pre, .toot .text .content code {
-  background-color: var(--bg_nearly_opaque); 
+  background-color: var(--bg-nearly-opaque); 
 }
 
 .toot .text .content pre, .toot .text .content code {
-  background-color: var(--bg_nearly_opaque);
-}
-
-.emoji {
-  width: 3.5ex;
-  height: 3.5ex;
+  background-color: var(--bg-nearly-opaque);
 }
