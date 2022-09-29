@@ -91,6 +91,8 @@ html, body {
 
 .toot .info {
   border-top: 0.15rem solid var(--xp-lightest-blue);
+  background: inherit;
+  color: inherit;
 }
 
 .toot .text .content pre, .toot .text .content code {
