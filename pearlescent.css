@@ -91,10 +91,18 @@ html, body {
   color: var(--gray1);
 };
 
-toot .text .content pre, .toot .text .content code {
+.toot .text .content pre {
+  background-color: initial; 
+}
+
+.toot .text .content code {
+  background-color: initial; 
+}
+
+.toot .text .content pre {
   background-color: var(--bg-nearly-opaque); 
 }
 
-.toot .text .content pre, .toot .text .content code {
+.toot .text .emoji:hover, .toot .text .emoji:active {
   background-color: var(--bg-nearly-opaque);
 }
